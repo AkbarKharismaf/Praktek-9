@@ -1,37 +1,36 @@
 public class Peminjaman {
-    private Peminjam peminjam;
-    private Petugas petugas;
-    private Buku buku;
 
+  private Peminjam peminjam;
+  private Petugas petugas;
+  private Buku buku;
 
-    public Peminjaman(Peminjam peminjam, Petugas petugas, Buku buku)throws Exception {
-
-        if(!peminjam.isLogin()){
-            throw new Exception("Peminjam belum login");
-        }
-
-        if(peminjam.getNamaPeminjam() == null){
-            throw new Exception("Nama peminjam tidak boleh kosong");
-        }
-
-        if(peminjam.getKodePeminjam() == null){
-            throw new Exception("Kode peminjam tidak boleh kosong");
-        }
-
-        this.peminjam = peminjam;
-        this.petugas = petugas;
-        this.buku = buku;
+  public Peminjaman(Peminjam peminjam, Petugas petugas, Buku buku) throws Exception {
+    if (!peminjam.isLogin()) {
+      throw new Exception("Peminjam belum login");
     }
 
-    public Peminjam getPeminjam(){
-        return peminjam;
+    if (peminjam.getNamaPeminjam() == null) {
+      throw new Exception("Nama Peminjam tidak boleh kosong");
     }
 
-    public Petugas getPetugas(){
-        return petugas;
+    if (peminjam.getKodePeminjam() == null) {
+      throw new Exception("Kode Peminjam tidak boleh kosong");
     }
 
-    public Buku getBuku(){
-        return buku;
-    }
+    this.peminjam = peminjam;
+    this.petugas = petugas;
+    this.buku = buku;
+  }
+
+  public Peminjam getPeminjam() {
+    return peminjam;
+  }
+
+  public Petugas getPetugas() {
+    return petugas;
+  }
+
+  public Buku getBuku() {
+    return buku;
+  }
 }

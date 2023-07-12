@@ -1,26 +1,28 @@
-import java.time.LocalDate;
+import java.util.Date;
 
 public class BukuLuar extends Buku {
-    private String imporOleh;
-    private LocalDate tglimpor;
 
-    public BukuLuar(String idBuku, String namaBuku){
-        super(idBuku, namaBuku);
-    }
+  private String imporOleh;
+  private Date tglImpor;
 
-    public void setImporOleh(String imporOleh){
-        this.imporOleh = imporOleh;
-    }
+  public BukuLuar(String idBuku, String namaBuku) {
+    super(idBuku, namaBuku);
+  }
 
-    public String getImporOleh(){
-        return imporOleh;
-    }
+  public void setImporOleh(String imporOleh) {
+    this.imporOleh = imporOleh;
+  }
 
-    public void setTglImpor(LocalDate tglImpor){
-        this.tglimpor = tglImpor;
-    }
+  public String getImporOleh() {
+    return imporOleh;
+  }
 
-    public LocalDate getTglImpor(){
-        return tglimpor;
-    }
+  public void setTglImpor(Date tglImpor) {
+    this.tglImpor = tglImpor;
+  }
+
+  public Date getTglImpor() {
+    return tglImpor;
+  }
+
 }
